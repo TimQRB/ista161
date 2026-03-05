@@ -54,17 +54,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const activeObserver = new IntersectionObserver(
     (entries) => {
+      let bestEntry = null;
+
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          if (id) {
-            setActiveLink(`#${id}`);
-          }
+        if (!entry.isIntersecting) {
+          return;
+        }
+        if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
+          bestEntry = entry;
         }
       });
+
+      if (bestEntry) {
+        const id = bestEntry.target.id;
+        if (id) {
+          setActiveLink(`#${id}`);
+        }
+      }
     },
     {
-      threshold: 0.35,
+      threshold: [0.3, 0.6],
+      rootMargin: "-56px 0px 0px 0px",
     }
   );
 
@@ -87,6 +97,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const weekImages = document.querySelectorAll(".week-image");
   weekImages.forEach((img) => {
     img.setAttribute("loading", "lazy");
+  });
+
+  const diagrams = document.querySelectorAll(".hover-diagram");
+  diagrams.forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+      img.classList.add("is-hovered");
+    });
+    img.addEventListener("mouseleave", () => {
+      img.classList.remove("is-hovered");
+    });
   });
 
   if (nav && navToggle) {

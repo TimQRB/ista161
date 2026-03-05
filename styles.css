@@ -303,6 +303,203 @@ body {
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.35);
 }
 
+.hover-diagram {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transform-origin: center center;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.diagram-week2 {
+  max-width: 420px;
+}
+
+.hover-diagram.is-hovered {
+  transform: scale(1.04);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.35);
+}
+
+.week-cycle-title {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.week-flow-wrapper {
+  grid-column: 1 / -1;
+  margin-top: 14px;
+}
+
+.week-flow-card {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.week-flow-card .card-body {
+  background: transparent;
+}
+
+.week-flow-diagram {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.flow-line {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.flow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 10px;
+  margin-bottom: 10px;
+}
+
+.flow-row:last-child {
+  margin-bottom: 0;
+}
+
+.flow-box {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.flow-olive {
+  background: #84a03a;
+  color: #fff;
+}
+
+.flow-teal {
+  background: #5fb3b3;
+  color: #fff;
+}
+
+.flow-yellow {
+  background: #e6c547;
+  color: #1a1a1a;
+}
+
+.flow-purple {
+  background: #8b6baf;
+  color: #fff;
+}
+
+.flow-label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  color: #111827;
+}
+
+.flow-plan {
+  color: #2563eb;
+}
+
+.flow-collect {
+  color: #10b981;
+}
+
+.flow-assure {
+  color: #f59e0b;
+}
+
+.flow-describe {
+  color: #ec4899;
+}
+
+.flow-archive {
+  color: #06b6d4;
+}
+
+.flow-share {
+  color: #facc15;
+}
+
+.flow-reuse {
+  color: #a855f7;
+}
+
+.flow-discover {
+  color: #22c55e;
+}
+
+.flow-integrate {
+  color: #3b82f6;
+}
+
+.flow-analyze {
+  color: #fb7185;
+}
+
+.flow-badge-olive,
+.flow-badge-teal,
+.flow-badge-yellow,
+.flow-badge-purple {
+  padding: 8px 22px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.22);
+  letter-spacing: 0.03em;
+}
+
+.flow-badge-olive {
+  background: #6f8b2f;
+  color: #f9fafb;
+}
+
+.flow-badge-teal {
+  background: #1f9fa0;
+  color: #f9fafb;
+}
+
+.flow-badge-yellow {
+  background: #f6bf26;
+  color: #1a1a1a;
+}
+
+.flow-badge-purple {
+  background: #7b4fb4;
+  color: #f9fafb;
+}
+
+.flow-arrow {
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.flow-arrow-dotted {
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.week-flow-desc {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.week-flow-arrows .flow-row {
+  margin-bottom: 0.5rem;
+}
+
 .conclusion {
   padding: 30px 0 56px;
 }
